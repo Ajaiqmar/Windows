@@ -1,0 +1,1 @@
+Z:\source\IQEditor\IQEditor\IQEditor.csproj;x86

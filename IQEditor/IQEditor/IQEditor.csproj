@@ -1,0 +1,661 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{2A284F40-C11C-4AD8-9204-79593FCBCC86}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IQEditor</RootNamespace>
+    <AssemblyName>IQEditor</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.22621.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WindowsXamlEnableOverview>true</WindowsXamlEnableOverview>
+    <AppxPackageSigningEnabled>false</AppxPackageSigningEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM64'">
+    <OutputPath>bin\ARM64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Properties\Default.rd.xml" />
+    <Content Include="Assets\LockScreenLogo.scale-200.png" />
+    <Content Include="Assets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\StoreLogo.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+    <Content Include="static\html\index.html" />
+    <Content Include="static\html\mailIndex.html" />
+    <Content Include="static\js\ace.js" />
+    <Content Include="static\js\ext-beautify.js" />
+    <Content Include="static\js\ext-code_lens.js" />
+    <Content Include="static\js\ext-command_bar.js" />
+    <Content Include="static\js\ext-diff.js" />
+    <Content Include="static\js\ext-elastic_tabstops_lite.js" />
+    <Content Include="static\js\ext-emmet.js" />
+    <Content Include="static\js\ext-error_marker.js" />
+    <Content Include="static\js\ext-hardwrap.js" />
+    <Content Include="static\js\ext-inline_autocomplete.js" />
+    <Content Include="static\js\ext-keybinding_menu.js" />
+    <Content Include="static\js\ext-language_tools.js" />
+    <Content Include="static\js\ext-linking.js" />
+    <Content Include="static\js\ext-modelist.js" />
+    <Content Include="static\js\ext-options.js" />
+    <Content Include="static\js\ext-prompt.js" />
+    <Content Include="static\js\ext-rtl.js" />
+    <Content Include="static\js\ext-searchbox.js" />
+    <Content Include="static\js\ext-settings_menu.js" />
+    <Content Include="static\js\ext-simple_tokenizer.js" />
+    <Content Include="static\js\ext-spellcheck.js" />
+    <Content Include="static\js\ext-split.js" />
+    <Content Include="static\js\ext-static_highlight.js" />
+    <Content Include="static\js\ext-statusbar.js" />
+    <Content Include="static\js\ext-textarea.js" />
+    <Content Include="static\js\ext-themelist.js" />
+    <Content Include="static\js\ext-whitespace.js" />
+    <Content Include="static\js\keybinding-emacs.js" />
+    <Content Include="static\js\keybinding-sublime.js" />
+    <Content Include="static\js\keybinding-vim.js" />
+    <Content Include="static\js\keybinding-vscode.js" />
+    <Content Include="static\js\mode-abap.js" />
+    <Content Include="static\js\mode-abc.js" />
+    <Content Include="static\js\mode-actionscript.js" />
+    <Content Include="static\js\mode-ada.js" />
+    <Content Include="static\js\mode-alda.js" />
+    <Content Include="static\js\mode-apache_conf.js" />
+    <Content Include="static\js\mode-apex.js" />
+    <Content Include="static\js\mode-applescript.js" />
+    <Content Include="static\js\mode-aql.js" />
+    <Content Include="static\js\mode-asciidoc.js" />
+    <Content Include="static\js\mode-asl.js" />
+    <Content Include="static\js\mode-assembly_arm32.js" />
+    <Content Include="static\js\mode-assembly_x86.js" />
+    <Content Include="static\js\mode-astro.js" />
+    <Content Include="static\js\mode-autohotkey.js" />
+    <Content Include="static\js\mode-basic.js" />
+    <Content Include="static\js\mode-batchfile.js" />
+    <Content Include="static\js\mode-bibtex.js" />
+    <Content Include="static\js\mode-c9search.js" />
+    <Content Include="static\js\mode-cirru.js" />
+    <Content Include="static\js\mode-clojure.js" />
+    <Content Include="static\js\mode-clue.js" />
+    <Content Include="static\js\mode-cobol.js" />
+    <Content Include="static\js\mode-coffee.js" />
+    <Content Include="static\js\mode-coldfusion.js" />
+    <Content Include="static\js\mode-crystal.js" />
+    <Content Include="static\js\mode-csharp.js" />
+    <Content Include="static\js\mode-csound_document.js" />
+    <Content Include="static\js\mode-csound_orchestra.js" />
+    <Content Include="static\js\mode-csound_score.js" />
+    <Content Include="static\js\mode-csp.js" />
+    <Content Include="static\js\mode-css.js" />
+    <Content Include="static\js\mode-csv.js" />
+    <Content Include="static\js\mode-curly.js" />
+    <Content Include="static\js\mode-cuttlefish.js" />
+    <Content Include="static\js\mode-c_cpp.js" />
+    <Content Include="static\js\mode-d.js" />
+    <Content Include="static\js\mode-dart.js" />
+    <Content Include="static\js\mode-diff.js" />
+    <Content Include="static\js\mode-django.js" />
+    <Content Include="static\js\mode-dockerfile.js" />
+    <Content Include="static\js\mode-dot.js" />
+    <Content Include="static\js\mode-drools.js" />
+    <Content Include="static\js\mode-edifact.js" />
+    <Content Include="static\js\mode-eiffel.js" />
+    <Content Include="static\js\mode-ejs.js" />
+    <Content Include="static\js\mode-elixir.js" />
+    <Content Include="static\js\mode-elm.js" />
+    <Content Include="static\js\mode-erlang.js" />
+    <Content Include="static\js\mode-flix.js" />
+    <Content Include="static\js\mode-forth.js" />
+    <Content Include="static\js\mode-fortran.js" />
+    <Content Include="static\js\mode-fsharp.js" />
+    <Content Include="static\js\mode-fsl.js" />
+    <Content Include="static\js\mode-ftl.js" />
+    <Content Include="static\js\mode-gcode.js" />
+    <Content Include="static\js\mode-gherkin.js" />
+    <Content Include="static\js\mode-gitignore.js" />
+    <Content Include="static\js\mode-glsl.js" />
+    <Content Include="static\js\mode-gobstones.js" />
+    <Content Include="static\js\mode-golang.js" />
+    <Content Include="static\js\mode-graphqlschema.js" />
+    <Content Include="static\js\mode-groovy.js" />
+    <Content Include="static\js\mode-haml.js" />
+    <Content Include="static\js\mode-handlebars.js" />
+    <Content Include="static\js\mode-haskell.js" />
+    <Content Include="static\js\mode-haskell_cabal.js" />
+    <Content Include="static\js\mode-haxe.js" />
+    <Content Include="static\js\mode-hjson.js" />
+    <Content Include="static\js\mode-html.js" />
+    <Content Include="static\js\mode-html_elixir.js" />
+    <Content Include="static\js\mode-html_ruby.js" />
+    <Content Include="static\js\mode-ini.js" />
+    <Content Include="static\js\mode-io.js" />
+    <Content Include="static\js\mode-ion.js" />
+    <Content Include="static\js\mode-jack.js" />
+    <Content Include="static\js\mode-jade.js" />
+    <Content Include="static\js\mode-java.js" />
+    <Content Include="static\js\mode-javascript.js" />
+    <Content Include="static\js\mode-jexl.js" />
+    <Content Include="static\js\mode-json.js" />
+    <Content Include="static\js\mode-json5.js" />
+    <Content Include="static\js\mode-jsoniq.js" />
+    <Content Include="static\js\mode-jsp.js" />
+    <Content Include="static\js\mode-jssm.js" />
+    <Content Include="static\js\mode-jsx.js" />
+    <Content Include="static\js\mode-julia.js" />
+    <Content Include="static\js\mode-kotlin.js" />
+    <Content Include="static\js\mode-latex.js" />
+    <Content Include="static\js\mode-latte.js" />
+    <Content Include="static\js\mode-less.js" />
+    <Content Include="static\js\mode-liquid.js" />
+    <Content Include="static\js\mode-lisp.js" />
+    <Content Include="static\js\mode-livescript.js" />
+    <Content Include="static\js\mode-logiql.js" />
+    <Content Include="static\js\mode-logtalk.js" />
+    <Content Include="static\js\mode-lsl.js" />
+    <Content Include="static\js\mode-lua.js" />
+    <Content Include="static\js\mode-luapage.js" />
+    <Content Include="static\js\mode-lucene.js" />
+    <Content Include="static\js\mode-makefile.js" />
+    <Content Include="static\js\mode-markdown.js" />
+    <Content Include="static\js\mode-mask.js" />
+    <Content Include="static\js\mode-matlab.js" />
+    <Content Include="static\js\mode-maze.js" />
+    <Content Include="static\js\mode-mediawiki.js" />
+    <Content Include="static\js\mode-mel.js" />
+    <Content Include="static\js\mode-mips.js" />
+    <Content Include="static\js\mode-mixal.js" />
+    <Content Include="static\js\mode-mushcode.js" />
+    <Content Include="static\js\mode-mysql.js" />
+    <Content Include="static\js\mode-nasal.js" />
+    <Content Include="static\js\mode-nginx.js" />
+    <Content Include="static\js\mode-nim.js" />
+    <Content Include="static\js\mode-nix.js" />
+    <Content Include="static\js\mode-nsis.js" />
+    <Content Include="static\js\mode-nunjucks.js" />
+    <Content Include="static\js\mode-objectivec.js" />
+    <Content Include="static\js\mode-ocaml.js" />
+    <Content Include="static\js\mode-odin.js" />
+    <Content Include="static\js\mode-partiql.js" />
+    <Content Include="static\js\mode-pascal.js" />
+    <Content Include="static\js\mode-perl.js" />
+    <Content Include="static\js\mode-pgsql.js" />
+    <Content Include="static\js\mode-php.js" />
+    <Content Include="static\js\mode-php_laravel_blade.js" />
+    <Content Include="static\js\mode-pig.js" />
+    <Content Include="static\js\mode-plain_text.js" />
+    <Content Include="static\js\mode-plsql.js" />
+    <Content Include="static\js\mode-powershell.js" />
+    <Content Include="static\js\mode-praat.js" />
+    <Content Include="static\js\mode-prisma.js" />
+    <Content Include="static\js\mode-prolog.js" />
+    <Content Include="static\js\mode-properties.js" />
+    <Content Include="static\js\mode-protobuf.js" />
+    <Content Include="static\js\mode-prql.js" />
+    <Content Include="static\js\mode-puppet.js" />
+    <Content Include="static\js\mode-python.js" />
+    <Content Include="static\js\mode-qml.js" />
+    <Content Include="static\js\mode-r.js" />
+    <Content Include="static\js\mode-raku.js" />
+    <Content Include="static\js\mode-razor.js" />
+    <Content Include="static\js\mode-rdoc.js" />
+    <Content Include="static\js\mode-red.js" />
+    <Content Include="static\js\mode-redshift.js" />
+    <Content Include="static\js\mode-rhtml.js" />
+    <Content Include="static\js\mode-robot.js" />
+    <Content Include="static\js\mode-rst.js" />
+    <Content Include="static\js\mode-ruby.js" />
+    <Content Include="static\js\mode-rust.js" />
+    <Content Include="static\js\mode-sac.js" />
+    <Content Include="static\js\mode-sass.js" />
+    <Content Include="static\js\mode-scad.js" />
+    <Content Include="static\js\mode-scala.js" />
+    <Content Include="static\js\mode-scheme.js" />
+    <Content Include="static\js\mode-scrypt.js" />
+    <Content Include="static\js\mode-scss.js" />
+    <Content Include="static\js\mode-sh.js" />
+    <Content Include="static\js\mode-sjs.js" />
+    <Content Include="static\js\mode-slim.js" />
+    <Content Include="static\js\mode-smarty.js" />
+    <Content Include="static\js\mode-smithy.js" />
+    <Content Include="static\js\mode-snippets.js" />
+    <Content Include="static\js\mode-soy_template.js" />
+    <Content Include="static\js\mode-space.js" />
+    <Content Include="static\js\mode-sparql.js" />
+    <Content Include="static\js\mode-sql.js" />
+    <Content Include="static\js\mode-sqlserver.js" />
+    <Content Include="static\js\mode-stylus.js" />
+    <Content Include="static\js\mode-svg.js" />
+    <Content Include="static\js\mode-swift.js" />
+    <Content Include="static\js\mode-tcl.js" />
+    <Content Include="static\js\mode-terraform.js" />
+    <Content Include="static\js\mode-tex.js" />
+    <Content Include="static\js\mode-text.js" />
+    <Content Include="static\js\mode-textile.js" />
+    <Content Include="static\js\mode-toml.js" />
+    <Content Include="static\js\mode-tsv.js" />
+    <Content Include="static\js\mode-tsx.js" />
+    <Content Include="static\js\mode-turtle.js" />
+    <Content Include="static\js\mode-twig.js" />
+    <Content Include="static\js\mode-typescript.js" />
+    <Content Include="static\js\mode-vala.js" />
+    <Content Include="static\js\mode-vbscript.js" />
+    <Content Include="static\js\mode-velocity.js" />
+    <Content Include="static\js\mode-verilog.js" />
+    <Content Include="static\js\mode-vhdl.js" />
+    <Content Include="static\js\mode-visualforce.js" />
+    <Content Include="static\js\mode-vue.js" />
+    <Content Include="static\js\mode-wollok.js" />
+    <Content Include="static\js\mode-xml.js" />
+    <Content Include="static\js\mode-xquery.js" />
+    <Content Include="static\js\mode-yaml.js" />
+    <Content Include="static\js\mode-zeek.js" />
+    <Content Include="static\js\mode-zig.js" />
+    <Content Include="static\js\snippets\abap.js" />
+    <Content Include="static\js\snippets\abc.js" />
+    <Content Include="static\js\snippets\actionscript.js" />
+    <Content Include="static\js\snippets\ada.js" />
+    <Content Include="static\js\snippets\alda.js" />
+    <Content Include="static\js\snippets\apache_conf.js" />
+    <Content Include="static\js\snippets\apex.js" />
+    <Content Include="static\js\snippets\applescript.js" />
+    <Content Include="static\js\snippets\aql.js" />
+    <Content Include="static\js\snippets\asciidoc.js" />
+    <Content Include="static\js\snippets\asl.js" />
+    <Content Include="static\js\snippets\assembly_arm32.js" />
+    <Content Include="static\js\snippets\assembly_x86.js" />
+    <Content Include="static\js\snippets\astro.js" />
+    <Content Include="static\js\snippets\autohotkey.js" />
+    <Content Include="static\js\snippets\basic.js" />
+    <Content Include="static\js\snippets\batchfile.js" />
+    <Content Include="static\js\snippets\bibtex.js" />
+    <Content Include="static\js\snippets\c9search.js" />
+    <Content Include="static\js\snippets\cirru.js" />
+    <Content Include="static\js\snippets\clojure.js" />
+    <Content Include="static\js\snippets\clue.js" />
+    <Content Include="static\js\snippets\cobol.js" />
+    <Content Include="static\js\snippets\coffee.js" />
+    <Content Include="static\js\snippets\coldfusion.js" />
+    <Content Include="static\js\snippets\crystal.js" />
+    <Content Include="static\js\snippets\csharp.js" />
+    <Content Include="static\js\snippets\csound_document.js" />
+    <Content Include="static\js\snippets\csound_orchestra.js" />
+    <Content Include="static\js\snippets\csound_score.js" />
+    <Content Include="static\js\snippets\csp.js" />
+    <Content Include="static\js\snippets\css.js" />
+    <Content Include="static\js\snippets\csv.js" />
+    <Content Include="static\js\snippets\curly.js" />
+    <Content Include="static\js\snippets\cuttlefish.js" />
+    <Content Include="static\js\snippets\c_cpp.js" />
+    <Content Include="static\js\snippets\d.js" />
+    <Content Include="static\js\snippets\dart.js" />
+    <Content Include="static\js\snippets\diff.js" />
+    <Content Include="static\js\snippets\django.js" />
+    <Content Include="static\js\snippets\dockerfile.js" />
+    <Content Include="static\js\snippets\dot.js" />
+    <Content Include="static\js\snippets\drools.js" />
+    <Content Include="static\js\snippets\edifact.js" />
+    <Content Include="static\js\snippets\eiffel.js" />
+    <Content Include="static\js\snippets\ejs.js" />
+    <Content Include="static\js\snippets\elixir.js" />
+    <Content Include="static\js\snippets\elm.js" />
+    <Content Include="static\js\snippets\erlang.js" />
+    <Content Include="static\js\snippets\flix.js" />
+    <Content Include="static\js\snippets\forth.js" />
+    <Content Include="static\js\snippets\fortran.js" />
+    <Content Include="static\js\snippets\fsharp.js" />
+    <Content Include="static\js\snippets\fsl.js" />
+    <Content Include="static\js\snippets\ftl.js" />
+    <Content Include="static\js\snippets\gcode.js" />
+    <Content Include="static\js\snippets\gherkin.js" />
+    <Content Include="static\js\snippets\gitignore.js" />
+    <Content Include="static\js\snippets\glsl.js" />
+    <Content Include="static\js\snippets\gobstones.js" />
+    <Content Include="static\js\snippets\golang.js" />
+    <Content Include="static\js\snippets\graphqlschema.js" />
+    <Content Include="static\js\snippets\groovy.js" />
+    <Content Include="static\js\snippets\haml.js" />
+    <Content Include="static\js\snippets\handlebars.js" />
+    <Content Include="static\js\snippets\haskell.js" />
+    <Content Include="static\js\snippets\haskell_cabal.js" />
+    <Content Include="static\js\snippets\haxe.js" />
+    <Content Include="static\js\snippets\hjson.js" />
+    <Content Include="static\js\snippets\html.js" />
+    <Content Include="static\js\snippets\html_elixir.js" />
+    <Content Include="static\js\snippets\html_ruby.js" />
+    <Content Include="static\js\snippets\ini.js" />
+    <Content Include="static\js\snippets\io.js" />
+    <Content Include="static\js\snippets\ion.js" />
+    <Content Include="static\js\snippets\jack.js" />
+    <Content Include="static\js\snippets\jade.js" />
+    <Content Include="static\js\snippets\java.js" />
+    <Content Include="static\js\snippets\javascript.js" />
+    <Content Include="static\js\snippets\jexl.js" />
+    <Content Include="static\js\snippets\json.js" />
+    <Content Include="static\js\snippets\json5.js" />
+    <Content Include="static\js\snippets\jsoniq.js" />
+    <Content Include="static\js\snippets\jsp.js" />
+    <Content Include="static\js\snippets\jssm.js" />
+    <Content Include="static\js\snippets\jsx.js" />
+    <Content Include="static\js\snippets\julia.js" />
+    <Content Include="static\js\snippets\kotlin.js" />
+    <Content Include="static\js\snippets\latex.js" />
+    <Content Include="static\js\snippets\latte.js" />
+    <Content Include="static\js\snippets\less.js" />
+    <Content Include="static\js\snippets\liquid.js" />
+    <Content Include="static\js\snippets\lisp.js" />
+    <Content Include="static\js\snippets\livescript.js" />
+    <Content Include="static\js\snippets\logiql.js" />
+    <Content Include="static\js\snippets\logtalk.js" />
+    <Content Include="static\js\snippets\lsl.js" />
+    <Content Include="static\js\snippets\lua.js" />
+    <Content Include="static\js\snippets\luapage.js" />
+    <Content Include="static\js\snippets\lucene.js" />
+    <Content Include="static\js\snippets\makefile.js" />
+    <Content Include="static\js\snippets\markdown.js" />
+    <Content Include="static\js\snippets\mask.js" />
+    <Content Include="static\js\snippets\matlab.js" />
+    <Content Include="static\js\snippets\maze.js" />
+    <Content Include="static\js\snippets\mediawiki.js" />
+    <Content Include="static\js\snippets\mel.js" />
+    <Content Include="static\js\snippets\mips.js" />
+    <Content Include="static\js\snippets\mixal.js" />
+    <Content Include="static\js\snippets\mushcode.js" />
+    <Content Include="static\js\snippets\mysql.js" />
+    <Content Include="static\js\snippets\nasal.js" />
+    <Content Include="static\js\snippets\nginx.js" />
+    <Content Include="static\js\snippets\nim.js" />
+    <Content Include="static\js\snippets\nix.js" />
+    <Content Include="static\js\snippets\nsis.js" />
+    <Content Include="static\js\snippets\nunjucks.js" />
+    <Content Include="static\js\snippets\objectivec.js" />
+    <Content Include="static\js\snippets\ocaml.js" />
+    <Content Include="static\js\snippets\odin.js" />
+    <Content Include="static\js\snippets\partiql.js" />
+    <Content Include="static\js\snippets\pascal.js" />
+    <Content Include="static\js\snippets\perl.js" />
+    <Content Include="static\js\snippets\pgsql.js" />
+    <Content Include="static\js\snippets\php.js" />
+    <Content Include="static\js\snippets\php_laravel_blade.js" />
+    <Content Include="static\js\snippets\pig.js" />
+    <Content Include="static\js\snippets\plain_text.js" />
+    <Content Include="static\js\snippets\plsql.js" />
+    <Content Include="static\js\snippets\powershell.js" />
+    <Content Include="static\js\snippets\praat.js" />
+    <Content Include="static\js\snippets\prisma.js" />
+    <Content Include="static\js\snippets\prolog.js" />
+    <Content Include="static\js\snippets\properties.js" />
+    <Content Include="static\js\snippets\protobuf.js" />
+    <Content Include="static\js\snippets\prql.js" />
+    <Content Include="static\js\snippets\puppet.js" />
+    <Content Include="static\js\snippets\python.js" />
+    <Content Include="static\js\snippets\qml.js" />
+    <Content Include="static\js\snippets\r.js" />
+    <Content Include="static\js\snippets\raku.js" />
+    <Content Include="static\js\snippets\razor.js" />
+    <Content Include="static\js\snippets\rdoc.js" />
+    <Content Include="static\js\snippets\red.js" />
+    <Content Include="static\js\snippets\redshift.js" />
+    <Content Include="static\js\snippets\rhtml.js" />
+    <Content Include="static\js\snippets\robot.js" />
+    <Content Include="static\js\snippets\rst.js" />
+    <Content Include="static\js\snippets\ruby.js" />
+    <Content Include="static\js\snippets\rust.js" />
+    <Content Include="static\js\snippets\sac.js" />
+    <Content Include="static\js\snippets\sass.js" />
+    <Content Include="static\js\snippets\scad.js" />
+    <Content Include="static\js\snippets\scala.js" />
+    <Content Include="static\js\snippets\scheme.js" />
+    <Content Include="static\js\snippets\scrypt.js" />
+    <Content Include="static\js\snippets\scss.js" />
+    <Content Include="static\js\snippets\sh.js" />
+    <Content Include="static\js\snippets\sjs.js" />
+    <Content Include="static\js\snippets\slim.js" />
+    <Content Include="static\js\snippets\smarty.js" />
+    <Content Include="static\js\snippets\smithy.js" />
+    <Content Include="static\js\snippets\snippets.js" />
+    <Content Include="static\js\snippets\soy_template.js" />
+    <Content Include="static\js\snippets\space.js" />
+    <Content Include="static\js\snippets\sparql.js" />
+    <Content Include="static\js\snippets\sql.js" />
+    <Content Include="static\js\snippets\sqlserver.js" />
+    <Content Include="static\js\snippets\stylus.js" />
+    <Content Include="static\js\snippets\svg.js" />
+    <Content Include="static\js\snippets\swift.js" />
+    <Content Include="static\js\snippets\tcl.js" />
+    <Content Include="static\js\snippets\terraform.js" />
+    <Content Include="static\js\snippets\tex.js" />
+    <Content Include="static\js\snippets\text.js" />
+    <Content Include="static\js\snippets\textile.js" />
+    <Content Include="static\js\snippets\toml.js" />
+    <Content Include="static\js\snippets\tsv.js" />
+    <Content Include="static\js\snippets\tsx.js" />
+    <Content Include="static\js\snippets\turtle.js" />
+    <Content Include="static\js\snippets\twig.js" />
+    <Content Include="static\js\snippets\typescript.js" />
+    <Content Include="static\js\snippets\vala.js" />
+    <Content Include="static\js\snippets\vbscript.js" />
+    <Content Include="static\js\snippets\velocity.js" />
+    <Content Include="static\js\snippets\verilog.js" />
+    <Content Include="static\js\snippets\vhdl.js" />
+    <Content Include="static\js\snippets\visualforce.js" />
+    <Content Include="static\js\snippets\vue.js" />
+    <Content Include="static\js\snippets\wollok.js" />
+    <Content Include="static\js\snippets\xml.js" />
+    <Content Include="static\js\snippets\xquery.js" />
+    <Content Include="static\js\snippets\yaml.js" />
+    <Content Include="static\js\snippets\zeek.js" />
+    <Content Include="static\js\snippets\zig.js" />
+    <Content Include="static\js\theme-ambiance.js" />
+    <Content Include="static\js\theme-chaos.js" />
+    <Content Include="static\js\theme-chrome.js" />
+    <Content Include="static\js\theme-cloud9_day.js" />
+    <Content Include="static\js\theme-cloud9_night.js" />
+    <Content Include="static\js\theme-cloud9_night_low_color.js" />
+    <Content Include="static\js\theme-clouds.js" />
+    <Content Include="static\js\theme-clouds_midnight.js" />
+    <Content Include="static\js\theme-cloud_editor.js" />
+    <Content Include="static\js\theme-cloud_editor_dark.js" />
+    <Content Include="static\js\theme-cobalt.js" />
+    <Content Include="static\js\theme-crimson_editor.js" />
+    <Content Include="static\js\theme-dawn.js" />
+    <Content Include="static\js\theme-dracula.js" />
+    <Content Include="static\js\theme-dreamweaver.js" />
+    <Content Include="static\js\theme-eclipse.js" />
+    <Content Include="static\js\theme-github.js" />
+    <Content Include="static\js\theme-github_dark.js" />
+    <Content Include="static\js\theme-github_light_default.js" />
+    <Content Include="static\js\theme-gob.js" />
+    <Content Include="static\js\theme-gruvbox.js" />
+    <Content Include="static\js\theme-gruvbox_dark_hard.js" />
+    <Content Include="static\js\theme-gruvbox_light_hard.js" />
+    <Content Include="static\js\theme-idle_fingers.js" />
+    <Content Include="static\js\theme-iplastic.js" />
+    <Content Include="static\js\theme-katzenmilch.js" />
+    <Content Include="static\js\theme-kr_theme.js" />
+    <Content Include="static\js\theme-kuroir.js" />
+    <Content Include="static\js\theme-merbivore.js" />
+    <Content Include="static\js\theme-merbivore_soft.js" />
+    <Content Include="static\js\theme-monokai.js" />
+    <Content Include="static\js\theme-mono_industrial.js" />
+    <Content Include="static\js\theme-nord_dark.js" />
+    <Content Include="static\js\theme-one_dark.js" />
+    <Content Include="static\js\theme-pastel_on_dark.js" />
+    <Content Include="static\js\theme-solarized_dark.js" />
+    <Content Include="static\js\theme-solarized_light.js" />
+    <Content Include="static\js\theme-sqlserver.js" />
+    <Content Include="static\js\theme-terminal.js" />
+    <Content Include="static\js\theme-textmate.js" />
+    <Content Include="static\js\theme-tomorrow.js" />
+    <Content Include="static\js\theme-tomorrow_night.js" />
+    <Content Include="static\js\theme-tomorrow_night_blue.js" />
+    <Content Include="static\js\theme-tomorrow_night_bright.js" />
+    <Content Include="static\js\theme-tomorrow_night_eighties.js" />
+    <Content Include="static\js\theme-twilight.js" />
+    <Content Include="static\js\theme-vibrant_ink.js" />
+    <Content Include="static\js\theme-xcode.js" />
+    <Content Include="static\js\worker-base.js" />
+    <Content Include="static\js\worker-coffee.js" />
+    <Content Include="static\js\worker-css.js" />
+    <Content Include="static\js\worker-html.js" />
+    <Content Include="static\js\worker-javascript.js" />
+    <Content Include="static\js\worker-json.js" />
+    <Content Include="static\js\worker-lua.js" />
+    <Content Include="static\js\worker-php.js" />
+    <Content Include="static\js\worker-xml.js" />
+    <Content Include="static\js\worker-xquery.js" />
+    <Content Include="static\js\worker-yaml.js" />
+    <Content Include="static\mailJS\squire-raw.js" />
+    <Content Include="static\mailJS\squire-raw.mjs" />
+    <Content Include="static\mailJS\squire.js" />
+    <Content Include="static\mailJS\squire.mjs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.2.14</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.UI.Xaml">
+      <Version>2.8.7</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="static\mailJS\squire.js.map" />
+    <None Include="static\mailJS\squire.mjs.map" />
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
